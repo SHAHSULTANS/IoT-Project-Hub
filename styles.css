@@ -9,8 +9,8 @@ body {
 }
 
 .mylogo {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .mylogo img {
@@ -39,7 +39,7 @@ body {
 }
 
 #navbar .container {
-    padding: 5px;
+    
     max-width: 1200px;
     margin: auto;
     width: 90%;
@@ -83,7 +83,7 @@ body {
 
 
     color: white;
-    margin-top: 62px;
+    margin-top: 55px;
 }
 
 .header h1 {
