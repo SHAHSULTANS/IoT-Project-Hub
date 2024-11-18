@@ -1,0 +1,412 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.mylogo {
+    width: 50px;
+    height: 50px;
+}
+
+.mylogo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+
+}
+
+
+
+/*Navbar styling.*/
+#navbar {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    background-color: #333;
+    width: 100%;
+    color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.214);
+}
+
+#navbar h1 {
+    font-size: 1.5rem;
+}
+
+#navbar .container {
+    padding: 5px;
+    max-width: 1200px;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2px;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s, transform 0.8s;
+    /*this property used for smooth animation between two state. quickly or slowely changes properties like color, background-color, width, height, opacity.*/
+
+    display: inline-block;
+    /*if i don't use it, then tranform poperty will not working because of anchor tag default display property(inline)*/
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.active {
+    color: #f39c12;
+    transform: scale(1.2);
+    font-weight: bold;
+
+}
+
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e9600, #4caf50, #76c893);
+
+
+    color: white;
+    margin-top: 62px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header p {
+    margin: 10px 0 0;
+}
+
+.videocontainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Video Content Section */
+.video-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 3;
+    justify-content: space-between;
+
+    padding: 0;
+
+}
+
+.video-card {
+    flex: 1 1 calc(33.333% - 20px);
+    /* Takes 1/3 of the container width, minus the gap */
+    max-width: calc(33.333% - 20px);
+    /* Ensures max width matches flex calculation */
+    min-width: 320px;
+    /* Prevents cards from shrinking too small */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    max-width: 100%;
+    /* Allow flexibility in growing */
+}
+
+.video-card iframe {
+    width: 100%;
+    height: 200px;
+}
+
+.video-info {
+    padding: 15px;
+}
+
+.video-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #3db141;
+}
+
+.video-info p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    flex: 1;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    position: sticky;
+    top: 80px;
+    /* Adjust based on your navbar height */
+    height: max-content;
+}
+
+.right-sidebar h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #4CAF50;
+    text-align: center;
+}
+
+.right-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.right-sidebar ul li {
+    margin: 10px 0;
+}
+
+.right-sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.right-sidebar ul li {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.right-sidebar ul li:hover,
+ul li a:hover {
+    color: #4CAF50;
+    transform: translateX(5px);
+    
+}
+
+/* Responsive Design */
+@media screen and (max-width:768px) {
+    /* .video-card {
+        max-width: 250px;
+    }
+
+    .video-card iframe {
+        
+    } */
+}
+
+@media screen and (max-width:400px) {
+    .videocontainer {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width:350px) {
+    #navbar .container {
+        justify-content: space-around;
+
+    }
+
+    #navbar ul {
+        padding-left: 2px;
+        gap: 8px;
+
+    }
+    #navbar ul li a{
+        font-size: 13px;
+    }
+
+    .mylogo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
+#header,#contact{
+    scroll-margin-top: 65px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background: linear-gradient(135deg, #0d0f1f, #2c3e50, #34495e);
+
+    color: #f5f5f5;
+
+    padding: 30px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container>div {
+    flex: 1;
+    min-width: 250px;
+
+    text-align: center;
+}
+
+.footer-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fcd34d;
+    padding-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-info a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: #fcd34d;
+    transform: translateX(5px);
+}
+
+
+.follow-icon {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.follow-icon a {
+    font-size: 30px;
+    text-align: center;
+    color: #f5f5f5;
+    transition: transform 0.3s, color 0.3s ease-in-out;
+}
+
+.follow-icon a:hover {
+    transform: scale(1.2);
+    color: #fcd34d;
+}
+
+.contact-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #91a1c9;
+    box-shadow: 0 0 5px #91a1c9;
+}
+
+.contact-form button {
+    background: linear-gradient(135deg, #ff6f61, #fcd34d, #34c3db);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #fcd34d, #34c3db, #91a1c9);
+    transform: scale(1.1);
+    color: #333;
+}
+
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: white;
+
+}
+
+.footer-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #fff;
+}
+
+.footer-text {
+    font-size: 17px;
+}
+
+#username {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container>div {
+        text-align: center;
+    }
+}
